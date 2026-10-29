@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwadi University</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        /* Header */
+
+        header {
+            background: #12355b;
+            color: white;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 28px;
+        }
+
+        .logo p {
+            font-size: 13px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 450px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.55)),
+                url("https://www.citybit.in/wp-content/uploads/2025/01/MarwadiUniversity.jpg") center/cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #f4a261;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #e76f51;
+        }
+
+        /* Sections */
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #12355b;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .light {
+            background: #f4f7fa;
+        }
+
+        .box {
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        .box p {
+            font-size: 18px;
+        }
+
+        /* Cards */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 12px #ccc;
+        }
+
+        .card h3 {
+            color: #12355b;
+            margin-bottom: 12px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Table */
+
+        table {
+            width: 90%;
+            margin: auto;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 14px;
+        }
+
+        th {
+            background: #12355b;
+            color: white;
+        }
+
+        tr:hover {
+            background: #eef4f8;
+        }
+
+        /* Gallery */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item p {
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        /* Recruiters */
+
+        .recruiters {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .company {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #12355b;
+            box-shadow: 0 3px 10px #ccc;
+        }
+
+        .company:hover {
+            background: #12355b;
+            color: white;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #12355b;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            border-top: 1px solid #ffffff55;
+            padding-top: 15px;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+
+            header {
+                text-align: center;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .recruiters {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .recruiters {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Marwadi University</h1>
+            <p>University of Engineering & Technology</p>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#vision">Vision</a>
+            <a href="#mission">Mission</a>
+            <a href="#outcomes">PSO</a>
+            <a href="#courses">Courses</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#recruiters">Recruiters</a>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div>
+            <h2>Welcome to Marwadi University</h2>
+            <p>
+                Empowering students with knowledge, skills and values
+                for a successful future.
+            </p>
+            <a href="#courses" class="btn">Explore Courses</a>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="section">
+        <h2>Our Vision</h2>
+
+        <div class="box">
+            <p>
+                To become a leading institution providing quality technical
+                education and developing skilled professionals who contribute
+                to society and the nation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="mission" class="section light">
+        <h2>Our Mission</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Quality Education</h3>
+                <p>
+                    Provide quality education and contribute to social transformation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Innovation & Entrepreneurship</h3>
+                <p>
+                    Create leaders through innovation and entrepreneurship.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Research & Partnerships</h3>
+                <p>
+                    Promote research advancement and industrial and international partnerships.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Program Specific Outcomes -->
+    <section id="outcomes" class="section">
+        <h2>Program Specific Outcomes</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>PSO 1</h3>
+                <p>
+                    Apply programming concepts and computer technologies
+                    to develop software solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PSO 2</h3>
+                <p>
+                    Analyze and solve engineering problems using modern
+                    tools and technologies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>PSO 3</h3>
+                <p>
+                    Develop innovative applications to address real-world
+                    problems.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="section light">
+        <h2>Courses Offered</h2>
+
+        <table>
+            <tr>
+                <th>Sr. No.</th>
+                <th>Course</th>
+                <th>Duration</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Computer Engineering</td>
+                <td>4 Years</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Information Technology Engineering</td>
+                <td>4 Years</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Computer Science & Engineering (AI & ML)</td>
+                <td>4 Years</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Information & Communication Technology Engineering</td>
+                <td>4 Years</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Electronics & Communication Engineering</td>
+                <td>4 Years</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Mechanical Engineering</td>
+                <td>4 Years</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+        <h2>Event Image Gallery</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="https://daqwpj7vq235r.cloudfront.net/images/mba-institute/Marwadi-University%2BCampus-View1.jpg"
+                    alt="College Event">
+                <p>Marwadi University Campus</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://www.citybit.in/wp-content/uploads/2025/01/MarwadiUniversity.jpg"
+                    alt="Technical Event">
+                <p>Technical Events</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87" alt="Student Workshop">
+                <p>Student Workshop</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" alt="Seminar">
+                <p>Seminar & Conference</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe" alt="Sports Event">
+                <p>Sports Activities</p>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865" alt="Cultural Activities">
+                <p>Cultural Activities</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Recruiters -->
+    <section id="recruiters" class="section light">
+        <h2>Top Recruiters</h2>
+
+        <div class="recruiters">
+
+            <div class="company">TCS</div>
+            <div class="company">Infosys</div>
+            <div class="company">Wipro</div>
+            <div class="company">Accenture</div>
+            <div class="company">Deloitte</div>
+            <div class="company">IBM</div>
+            <div class="company">Microsoft</div>
+            <div class="company">Amazon</div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Marwadi University</h3>
+        <p>
+            Rajkot-Morbi Road, Rajkot 360 003, Gujarat, India
+        </p>
+        <p>Email: info@marwadiuniversity.ac.in</p>
+        <p>Phone: +91 281 7123456</p>
+
+        <p class="copyright">
+            © 2026 Marwadi University. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+
+</html>
